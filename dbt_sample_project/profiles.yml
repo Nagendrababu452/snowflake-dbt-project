@@ -1,0 +1,9 @@
+dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: KPI_PRACTICE
+      warehouse: KPI_PRACTICE_WH
+      database: KPI_LEARNING
+      schema: BRONZE_LAYER

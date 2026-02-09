@@ -1,0 +1,24 @@
+name: dbt_sample_project
+version: 1.0.0
+config-version: 2
+profile: dbt_project
+model-paths:
+  - models
+analysis-paths:
+  - analyses
+test-paths:
+  - tests
+seed-paths:
+  - seeds
+macro-paths:
+  - macros
+snapshot-paths:
+  - snapshots
+models:
+  dbt_sample_project:
+    stg:
+      +schema: silver_layer
+      +materialized: view
+    marts:
+      +schema: gold_layer
+      +materialized: table
